@@ -109,6 +109,7 @@ var myAtoi = function(str) {
    res = res < Math.pow(2, 31) * -1 ? Math.pow(2, 31) * -1 : res
 
    return res
+
 };
 
 // console.log(myAtoi('42'))
