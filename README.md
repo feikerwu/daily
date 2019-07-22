@@ -11,3 +11,7 @@
 #### 随机数
 
 1. [洗牌算法/从 n 个数随机生成长度为 k 的数列](algorithm/shuffle.ts)
+
+#### 数组
+
+1. [区间分类](array/classification.ts)
