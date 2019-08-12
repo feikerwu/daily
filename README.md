@@ -15,3 +15,7 @@
 #### 数组
 
 1. [区间分类](array/classification.ts)
+
+
+#### 其它
+1. [实现一个累加器add(1)(2)(3)](functional/curry.ts)
