@@ -15,6 +15,7 @@
 #### 数组
 
 1. [区间分类](array/classification.ts)
+2. [根据确定的顺序排序](array/customSort.ts)
 
 
 #### 其它

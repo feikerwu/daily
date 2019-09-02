@@ -21,6 +21,5 @@ function classification(arr: Array<number>): Array<number | string> {
 
     return cur;
   });
-
   return res;
 }
