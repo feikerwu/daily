@@ -16,6 +16,8 @@
 
 1. [区间分类](array/classification.ts)
 2. [根据确定的顺序排序](array/customSort.ts)
+3. [求一次股票交易中的最大利润](array/bestTimeToBuyStock.ts) *dp*;
+
 
 
 #### 其它
