@@ -16,9 +16,9 @@
 
 1. [区间分类](array/classification.ts)
 2. [根据确定的顺序排序](array/customSort.ts)
-3. [求一次股票交易中的最大利润](array/bestTimeToBuyStock.ts) *dp*;
-
-
+3. [求一次股票交易中的最大利润](array/bestTimeToBuyStock.ts) _dp_;
+4. [是否出现重复元素](array/isDuplicate.ts) _sort/hash 表/set 三种实现方法_
 
 #### 其它
-1. [实现一个累加器add(1)(2)(3)](functional/curry.ts)
+
+1. [实现一个累加器 add(1)(2)(3)](functional/curry.ts)
