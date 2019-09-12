@@ -20,6 +20,7 @@
 4. [是否出现重复元素](array/isDuplicate.ts) _sort/hash 表/set 三种实现方法_
 5. [两个有序数组寻找中位数](array/findMedianSortedArrays.ts) _todo: 没达到O(log(n + m)) 的要求，我太南了_
 6. [求数组里除当前数值外的积，不使用除法](array/productExceptSelf.ts)
+7. [求数组子序列最大和](array/maxSubArray.ts)
 
 #### 列表
 1. [反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序](list/reverseEveryKItems.ts)
