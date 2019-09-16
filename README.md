@@ -18,12 +18,18 @@
 2. [根据确定的顺序排序](array/customSort.ts)
 3. [求一次股票交易中的最大利润](array/bestTimeToBuyStock.ts) _dp_;
 4. [是否出现重复元素](array/isDuplicate.ts) _sort/hash 表/set 三种实现方法_
-5. [两个有序数组寻找中位数](array/findMedianSortedArrays.ts) _todo: 没达到O(log(n + m)) 的要求，我太南了_
+5. [两个有序数组寻找中位数](array/findMedianSortedArrays.ts) _todo: 没达到 O(log(n + m)) 的要求，我太南了_
 6. [求数组里除当前数值外的积，不使用除法](array/productExceptSelf.ts)
 7. [求数组子序列最大和](array/maxSubArray.ts)
 
 #### 列表
+
 1. [反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序](list/reverseEveryKItems.ts)
+
+#### 正则
+
+1. [匹配一个带嵌套{}的一个 map, 比如.vue 文件中的整个 props 内容](reg/oddBlack.ts)
+
 #### 其它
 
 1. [实现一个累加器 add(1)(2)(3)](functional/curry.ts)
