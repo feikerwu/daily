@@ -22,9 +22,10 @@
 6. [求数组里除当前数值外的积，不使用除法](array/productExceptSelf.ts)
 7. [求数组子序列最大和](array/maxSubArray.ts)
 
-#### 列表
+#### 链表
 
-1. [反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序](list/reverseEveryKItems.ts)
+1. [链表](list/index.ts)
+2. [反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序](list/reverseEveryKItems.ts)
 
 #### 正则
 
