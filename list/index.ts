@@ -1,5 +1,5 @@
 /* 列表节点 */
-class ListItem {
+export class ListItem {
   next: ListItem | null;
   value: any;
   constructor(value: any) {
@@ -11,26 +11,47 @@ class ListItem {
 /**
  * 列表
  */
-class List {
+export class List {
   head: ListItem;
   tail: ListItem;
-  constructor(value: any) {
-    this.head = new ListItem(value);
-    this.tail = this.head;
+  length: number;
+  constructor(values?: Array<any>) {
+    this.length = 0;
+    this.head = null;
+    this.tail = null;
+
+    if (values) {
+      this.length = values.length;
+      values.forEach(item => {
+        this.add(item);
+      });
+    }
   }
 
   /** 尾部添加 */
   add(value: any) {
     let curNode: ListItem = new ListItem(value);
-    this.tail.next = curNode;
-    this.tail = curNode;
+    if (this.head && this.tail) {
+      this.tail.next = curNode;
+      this.tail = curNode;
+    } else {
+      this.head = curNode;
+      this.tail = curNode;
+    }
+    this.length = this.length + 1;
   }
 
   /* 头部追加 */
   prepend(value: any) {
     let curNode: ListItem = new ListItem(value);
-    curNode.next = this.head;
-    this.head = curNode;
+    if (this.head) {
+      curNode.next = this.head;
+      this.head = curNode;
+    } else {
+      this.head = curNode;
+      this.tail = curNode;
+    }
+    this.length = this.length + 1;
   }
 
   /* 打印列表 */
@@ -49,6 +70,7 @@ class List {
     let tmp = this.head;
     while (tmp) {
       cb(tmp, tmp.value);
+      tmp = tmp.next;
     }
   }
 }
