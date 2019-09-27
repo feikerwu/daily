@@ -1,4 +1,4 @@
-import { List } from './';
+import { List } from '.';
 
 declare const global;
 
