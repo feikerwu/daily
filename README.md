@@ -35,3 +35,6 @@ A problem solver's daily
 
 ### 正则
 1. [匹配一个带嵌套{}的一个 map, 比如.vue 文件中的整个 props 内容](algorithm/reg/oddBlack.ts)
+
+### 面试题
+1. [微信面试题：实现一个lazyman](interviews/lazy-man.ts)
