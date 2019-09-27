@@ -10,7 +10,7 @@ A problem solver's daily
 3. [判断是否有一条路径之合等于 sum](algorithm/tree/hasSumPath.ts)
 
 #### 随机数
-1. [洗牌算法/从 n 个数随机生成长度为 k 的数列](algorithm/algorithm/shuffle.ts)
+1. [洗牌算法/从 n 个数随机生成长度为 k 的数列](algorithm/shuffle.ts)
 
 #### 数组
 1. [区间分类](algorithm/array/classification.ts)
@@ -20,9 +20,10 @@ A problem solver's daily
 5. [两个有序数组寻找中位数](algorithm/array/findMedianSortedArrays.ts) _todo: 没达到 O(log(n + m)) 的要求，我太南了_
 6. [求数组里除当前数值外的积，不使用除法](algorithm/array/productExceptSelf.ts)
 7. [求数组子序列最大和](algorithm/array/maxSubArray.ts)
+8. [根据当前排列生成下一个排列的方法](/notes/产生下一个排列序的算法.md)
 
 #### 链表
-1. [反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序](algorithm/list/reverseEveryKItems.ts)
+1. [反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序](daat-structure/list/reverseEveryKItems.ts)
 
 #### 其它
 1. [实现一个累加器 add(algorithm/1)(2)(3)](functional/curry.ts)
