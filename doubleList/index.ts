@@ -1,4 +1,4 @@
-class DoubleListItem {
+export class DoubleListItem {
   pre: DoubleListItem | null;
   next: DoubleListItem | null;
   value: any;
@@ -9,7 +9,7 @@ class DoubleListItem {
   }
 }
 
-class DoubleList {
+export class DoubleList {
   head: DoubleListItem;
   tail: DoubleListItem;
   length: number;
@@ -31,6 +31,7 @@ class DoubleList {
       curNode.pre = this.tail;
       this.tail = curNode;
     }
+    this.length = this.length + 1;
   }
 
   /* 在链表头部插入 */
@@ -43,6 +44,7 @@ class DoubleList {
       curNode.next = curNode;
       this.head = curNode;
     }
+    this.length = this.length + 1;
   }
 
   /* 打印元素 */
