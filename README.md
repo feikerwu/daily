@@ -23,7 +23,10 @@ A problem solver's daily
 8. [根据当前排列生成下一个排列的方法](/notes/产生下一个排列序的算法.md)
 
 #### 链表
-1. [反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序](daat-structure/list/reverseEveryKItems.ts)
+1. [反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序](data-structure/list/reverseEveryKItems.ts)
+
+#### Math
+1. [判断一个数是否是素数](algorithm/math/prime.ts)
 
 #### 其它
 1. [实现一个累加器 add(algorithm/1)(2)(3)](functional/curry.ts)
