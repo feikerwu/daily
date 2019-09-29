@@ -41,3 +41,6 @@ A problem solver's daily
 
 ### 面试题
 1. [微信面试题：实现一个lazyman](interviews/lazy-man.ts)
+
+### 笔记
+1. [批量改名&git签出](nodes/批量改名&git签出.md)
