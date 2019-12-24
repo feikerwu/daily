@@ -80,5 +80,5 @@ class LazyMan {
   }
 }
 
-let a = new LazyMan('a');
-a.sleepFirst(5).eat('dinner');
+let a = new LazyMan("a");
+a.sleepFirst(5).eat("dinner");
