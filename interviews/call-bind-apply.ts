@@ -33,3 +33,25 @@ Function.prototype.myBind = function(context: object, args: unknown[]) {
     return res;
   };
 };
+
+// @ts-ignore
+const name = 'window';
+
+function fn(...args) {
+  console.log('args', ...args);
+  console.log(this.name);
+}
+
+fn();
+let obj = {
+  name: 'xx'
+};
+// @ts-ignore
+fn.myCall(obj, 'call', 1, 2);
+
+// @ts-ignore
+fn.myApply({ name: 'apply' }, ['apply', 1, 2]);
+
+// @ts-ignore
+let t = fn.myBind({ name: 'bind' });
+t('1', '2');

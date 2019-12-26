@@ -50,6 +50,7 @@ A problem solver's daily
 
 1. [微信面试题：实现一个 lazyman](interviews/lazy-man.ts)
 2. [实现一个 flat，拍平数组](interviews/flat.ts)
+3. [手写call，bind，apply](interviews/call-bind-apply.ts)
 
 ### 笔记
 
