@@ -10,20 +10,28 @@
  * @return {number}
  */
 var firstMissingPositive = function(nums) {
-  nums.push(nums.length + 1);
+  nums.push(nums.length + 1); // 推入一个哨兵
   const { length } = nums;
   for (let i = 0; i < length; i++) {
-    let val = nums[i];
-    if (val > 0 && val <= length) {
-      nums[val] = true;
+    while (nums[i] > 0 && nums[i] < length && nums[nums[i]] !== nums[i]) {
+      swap(nums, nums[i], i);
     }
   }
 
   for (let j = 1; j < length; j++) {
-    if (nums[j] !== true) {
-      return nums[j];
+    if (nums[j] !== j) {
+      return j;
     }
   }
+
   return length;
 };
+
+// 交换两个数，用异或或者加减都可以
+function swap(nums, x, y) {
+  let a = nums[x];
+  nums[x] = nums[y];
+  nums[y] = a;
+}
+
 // @lc code=end
