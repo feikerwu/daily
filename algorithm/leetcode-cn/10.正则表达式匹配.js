@@ -11,7 +11,7 @@
  * @return {boolean}
  */
 
-// 递归写发
+// 递归写法
 var isMatch = function(s, p) {
   if (p.length === 0) {
     return !s.length
