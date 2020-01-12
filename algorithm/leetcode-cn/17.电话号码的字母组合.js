@@ -9,6 +9,7 @@
  * @param {string} digits
  * @return {string[]}
  */
+// eslint-disable-next-line no-unused-vars
 var letterCombinations = function(digits) {
   if (digits.length === 0) {
     return []
