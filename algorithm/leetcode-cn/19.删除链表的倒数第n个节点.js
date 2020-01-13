@@ -21,19 +21,22 @@ var removeNthFromEnd = function(head, n) {
   if (!head.next) {
     return n === 0 ? head : head.next
   }
-  let s1 = head, s2 = head;
-  let count = n
+  let sign = new ListNode(0);
+  sign.next = head
+  let s1 = sign, s2 = sign;
+  let count = n + 1
+  while(s1 && count) {
+    s1 = s1.next
+    count--
+  }
+
   while(s1) {
-    while(s1 && count) {
-      s1 = s1.next
-      count--
-    }
     s1 = s1.next
     s2 = s2.next
   }
 
   s2.next = s2.next.next
-  return head
+  return sign.next
 };
 // @lc code=end
 console.log(removeNthFromEnd([1,2,3,4,5], 2))
