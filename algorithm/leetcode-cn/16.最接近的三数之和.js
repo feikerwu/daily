@@ -15,33 +15,24 @@ var threeSumClosest = function(nums, target) {
   nums = nums.sort((a, b) => a - b)
   let res = Infinity
   for (let i = 0; i < nums.length; i++) {
-    let diff = target - nums[i]
-    let start = i - 1
-    let end = i + 1
-    let delta = Infinity
-    while(start >= 0 && end < nums.length && start < i && end > i) {
-      let sum = nums[start] + nums[end]
-      delta = Math.abs(delta) > Math.abs(diff - sum) ? diff - sum : delta
-      console.log({
-        diff,
-        i,
-        start,
-        end,
-        sum
-      })
-      if (sum < diff) {
-        start++
-      } else if (sum > diff) {
+    let start = i + 1;
+    let end = nums.length - 1
+    while(start < end) {
+      let sum = nums[i] + nums[start] + nums[end]
+      if (Math.abs(res - target) > Math.abs(sum - target)) {
+        res = sum
+      }
+      if (sum > target) {
         end--
+      } else if (sum < target) {
+        start++
       } else {
         return target
       }
     }
-    res = Math.abs(target - res) > Math.abs(delta) ? target - delta : res
   }
   return res;
 };
 
-console.log(threeSumClosest([1,1,1,0], 100))
 // @lc code=end
 
