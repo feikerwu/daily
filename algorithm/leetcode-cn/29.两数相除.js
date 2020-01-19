@@ -19,14 +19,12 @@ var divide = function(dividend, divisor) {
   divisor = Math.abs(divisor)
   let res = 0
   if (divisor === 1) {
-    res = dividend + 1
+    res = dividend
     dividend = -1
   }
-  while(dividend >= 0) {
-    dividend = dividend - divisor;
-    res++;
-  }
-  res = res - 1;
+
+  res = res + calc(dividend, divisor)
+
   if (sign === 0) {
     res = 0 - res
   }
@@ -38,6 +36,30 @@ var divide = function(dividend, divisor) {
 
   return res
 };
+
+function calc(a, b) {
+  if (b === 0) {
+    return 0
+  }
+  let res = 0
+  let count = 1
+  let c = b
+  while(a >= b && b > 0) {
+    a = a - b
+    res = res + count
+    b = b << 1
+    count = count << 1
+    console.log({
+      b,
+      count
+    })
+  }
+
+  if (a >= c) {
+    return res + calc(a, c)
+  }
+  return res
+}
 // @lc code=end
 
-console.log(divide(-2147483648,1))
+console.log(divide(2147483647,2))
