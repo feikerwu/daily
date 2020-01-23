@@ -12,6 +12,7 @@
  *     this.left = this.right = null;
  * }
  */
+
 /**
  * @param {number[]} preorder
  * @param {number[]} inorder
@@ -27,12 +28,15 @@ var buildTree = function(preorder, inorder) {
 
   let inOrderIndex = inorder.indexOf(value)
   let left = inorder.slice(0, inOrderIndex)
-  let right = inorder.slice(inOrderIndex + 1, inorder.length)
-
-  root.left = buildTree(preorder.slice(1, left.length), left)
+  let right = inorder.slice(inOrderIndex + 1)
+  root.left = buildTree(preorder.slice(1, left.length + 1), left)
   root.right = buildTree(preorder.slice(1 + left.length), right)
 
   return root
 };
 // @lc code=end
-
+function TreeNode(val) {
+  this.val = val;
+  this.left = this.right = null;
+}
+buildTree([3,9,20,15,7], [9,3,15,20,7])
