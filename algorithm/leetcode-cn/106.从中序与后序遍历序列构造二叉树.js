@@ -28,8 +28,8 @@ var buildTree = function(inorder, postorder) {
   let inOrderIndex = inorder.indexOf(value)
   let left = inorder.slice(0, inOrderIndex)
   let right = inorder.slice(inOrderIndex + 1)
-  root.left = buildTree(left, postorder.slice(0, left.length + 1))
-  root.right = buildTree(right, postorder.slice(left.length + 1, postorder.length - 2))
+  root.left = buildTree(left, postorder.slice(0, left.length))
+  root.right = buildTree(right, postorder.slice(left.length, postorder.length - 1))
   return root
 };
 // @lc code=end
