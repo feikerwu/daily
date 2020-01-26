@@ -18,14 +18,16 @@
  * @return {boolean}
  */
 var hasPathSum = function(root, sum) {
-  if (sum < 0) {
-    return false
-  }
   if (root === null) {
     return false
   }
 
-  return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val)
+  sum = sum - root.val
+  if (root.left === null && root.right === null) {
+    return sum === 0
+  }
+
+  return hasPathSum(root.left, sum) || hasPathSum(root.right, sum)
 };
 // @lc code=end
 
