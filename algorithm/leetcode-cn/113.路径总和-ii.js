@@ -17,22 +17,28 @@
  * @param {number} sum
  * @return {number[][]}
  */
-var pathSum = function(root, sum) {
 
+var pathSum = function(root, sum) {
+  let res = []
+  help(root, sum, [])
+
+  function help(root, sum, term) {
+    if (root === null) {
+      return
+    }
+    sum = sum - root.val
+    term.push(root.val)
+    if (root.left === null && root.right === null) {
+      if (sum === 0) {
+        res.push(term)
+      }
+    }
+    help(root.left, sum, term.slice())
+    help(root.right, sum, term.slice())
+  }
+  return res
 };
 
-function help(root, sum, res) {
-  if (root === null) {
-    return
-  }
 
-  sum = sum - root.val
-  res.push(res.val)
-  if (root.left === null && root.right === null) {
-    if (sum === 0) {
-
-    }
-  }
-}
 // @lc code=end
 
