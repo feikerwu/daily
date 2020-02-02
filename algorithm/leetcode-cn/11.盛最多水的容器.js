@@ -30,11 +30,14 @@ var maxArea = function(height) {
  * @return {number}
  */
 var maxArea = function(height) {
-  let max = -Infinity;
-  for (let i = 0; i < height.length; i++) {
-    for (let j = 0; j < height.length; j++) {
-      let curValue = (j - i) * Math.min(height[i], height[j])
-      max = Math.max(max, curValue)
+  let start = 0, end = height.length - 1
+  let max = -Infinity
+  while(start < end) {
+    max = Math.max(max, (end - start) * Math.min(height[start], height[end]))
+    if (height[start] < height[end]) {
+      start ++
+    } else {
+      end --
     }
   }
   return max
