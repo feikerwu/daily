@@ -21,9 +21,9 @@ var pushDominoes = function(dominoes) {
         let length = i - left - 1
         let term = ''
         if (length > 0) {
-          term =  `${new Array(Math.floor(length / 2)).fill('L').join('')}`
+          term =  `${new Array(Math.floor(length / 2)).fill('R').join('')}`
             + `${length % 2 === 1 ? '.' : ''}`
-            + `${new Array(Math.floor(length / 2)).fill('R').join('')}`
+            + `${new Array(Math.floor(length / 2)).fill('L').join('')}`
         } else {
           term = ''
         }
